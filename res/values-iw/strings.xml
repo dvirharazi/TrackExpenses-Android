@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מעקב הוצאות יומי</string>
+    <string name="back">חזור</string>
+    <string name="expanse_amount">מחיר</string>
+    <string name="add_expanse">הוסף</string>
+    <string name="ExpanseList">רשימת הוצאות</string>
+    <string name="details">פרטים</string>
+    <string name="food">אוכל</string>
+    <string name="clothing">ביגוד</string>
+    <string name="home">בית</string>
+    <string name="electronics">מיחשוב</string>
+    <string name="define_max_expenditure_on_food">הגדר הוצאה מקס\' על אוכל</string>
+    <string name="define_max_expenditure_on_clothing">הגדר הוצאה מקס\' על ביגוד</string>
+    <string name="define_max_expenditure_on_electronics">הגדר הוצאה מקס\' על אלקטרוניקה</string>
+    <string name="define_max_expenditure_on_home">הגדר הוצאה מקס\' על בית</string>
+    <string name="change_settings">שנה הגדרות</string>
+    <string name="change_succeeded">שינוי בוצע בהצלחה</string>
+    <string name="start">התחל</string>
+    <string name="start_over">התחל מחדש</string>
+    <string name="rate">דרג אותנו</string>
+    <string name="thank_for_rate">תודה על הדירוג !</string>
+    <string name="warning_toast">עברת את היעד </string>
+    <string name="enter">כניסה</string>
+    <string name="instruction">הוראות</string>
+    <string name="dialogTitle">ברוך הבא !</string>
+    <string name="dialogtext">הגדר את ההוצאות שלך :\nהגדר הגבלת הוצאות ב4 קטגוריות שונות\nהגדרת? אנחנו מוכנים להתחיל !\n\nהכנס סוג הוצאה וסכום\nשים לב שניתן לראות את מעקב ההוצאות בתחתית העמוד
+    </string>
+    <string name="scroll_up">גלול למעלה</string>
+    <string name="scroll_down">גלול למטה</string>
+    <string name="exit">יציאה</string>
+    <string name="back_to_menu">חזור לתפריט</string>
+    <string name="credit_card">אשראי</string>
+    <string name="enter_your_expanses">הכנס את ההוצאות שלך</string>
+    <string name="cash">מזומן</string>
+    <string name="choose_category">בחר קטגוריה:</string>
+    <string name="choose_amount">בחר סכום:</string>
+
+
+</resources>

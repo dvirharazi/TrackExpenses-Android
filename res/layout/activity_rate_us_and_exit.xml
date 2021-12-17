@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/pages_shape">
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:backgroundTint="@color/black"
+        app:backgroundTint="@null"
+        android:progressBackgroundTint="@color/grey"
+        android:progressTint="#D5CB0F"
+        android:stepSize="1" />
+
+    <Button
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/btns_shape"
+        app:backgroundTint="@null"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/rate"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/return_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/btns_shape"
+        app:backgroundTint="@null"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="@string/back_to_menu"
+         />
+
+</LinearLayout>

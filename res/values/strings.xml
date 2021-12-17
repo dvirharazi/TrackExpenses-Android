@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Expanse daily tracker</string>
+    <string name="back">Back</string>
+    <string name="expanse_amount">Amount</string>
+    <string name="add_expanse">Add</string>
+    <string name="ExpanseList">Expanse list</string>
+    <string name="details">Details</string>
+    <string name="food">Food</string>
+    <string name="clothing">Clothing</string>
+    <string name="home">Home</string>
+    <string name="electronics">Electronics</string>
+    <string name="define_max_expenditure_on_food">Define max expenditure on food</string>
+    <string name="define_max_expenditure_on_clothing">Define max expenditure on clothing</string>
+    <string name="define_max_expenditure_on_electronics">Define max expenditure on electronics</string>
+    <string name="define_max_expenditure_on_home">Define max expenditure on home</string>
+    <string name="change_settings">Change settings</string>
+    <string name="change_succeeded">Change succeeded</string>
+    <string name="start">Start</string>
+    <string name="start_over">Start over</string>
+    <string name="rate">Rate us</string>
+    <string name="thank_for_rate">Thanks for rating !</string>
+    <string name="warning_toast">You have passed the destination </string>
+    <string name="enter">Enter</string>
+    <string name="instruction">Instruction</string>
+    <string name="dialogTitle">Welcome to our App!</string>
+    <string name="dialogtext">Define your Expanses : \ndefine limited expenditure in 4 categories \n\nare you define? we ready to start ! \n\nnow just enter your expanse type and amount.\nkeep in mind that you can track in the bottom of this page</string>
+    <string name="scroll_up">scroll up</string>
+    <string name="scroll_down">scroll down</string>
+    <string name="exit">Exit</string>
+    <string name="back_to_menu">Back to menu</string>
+    <string name="credit_card">Credit</string>
+    <string name="enter_your_expanses">Enter your Expenses</string>
+    <string name="cash">Cash</string>
+    <string name="choose_category">Choose Category:</string>
+    <string name="choose_amount">Choose Amount:</string>
+
+
+</resources>

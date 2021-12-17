@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pages_shape">
+
+    <EditText
+        android:id="@+id/max_food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit_text"
+        android:gravity="center"
+        android:hint="@string/define_max_expenditure_on_food"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"/>
+
+    <EditText
+        android:id="@+id/max_clothing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit_text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="@string/define_max_expenditure_on_clothing"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/max_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit_text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="@string/define_max_expenditure_on_home"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/max_electronics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit_text"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:hint="@string/define_max_expenditure_on_electronics"
+        android:inputType="number" />
+
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="20dp"
+        android:background="@drawable/btns_shape"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="@string/start" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btns_shape"
+        app:backgroundTint="@null"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+
+        android:id="@+id/back_to_manu"
+        />
+
+
+</LinearLayout>

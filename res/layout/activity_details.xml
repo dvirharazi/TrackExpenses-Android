@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pages_shape">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/user_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <RelativeLayout
+                    android:id="@+id/rel_apin_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/category_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/choose_category"
+                        android:textColor="@color/black" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/category_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/dropdown_selector"
+                        android:entries="@array/category_array"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:popupBackground="@color/white"
+                        android:spinnerMode="dropdown"
+                        android:textAlignment="center"
+                        android:theme="@style/spinnerTheme" />
+
+                    <TextView
+                        android:id="@+id/amount_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spinner"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/choose_amount"
+                        android:textColor="@color/black" />
+
+
+                    <EditText
+                        android:id="@+id/expanse_price"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/amount_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/amount_txt_input_shape"
+                        android:hint="@string/expanse_amount"
+                        android:inputType="number"
+                        android:padding="5dp"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/checkboxes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toEndOf="@+id/rel_apin_amount">
+
+                    <TextView
+                        android:id="@+id/credit_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:text="@string/credit_card"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/cash_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_toEndOf="@id/credit_txt"
+                        android:text="@string/cash"
+                        android:textColor="@color/black" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_credit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/credit_txt"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cash_txt"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@+id/checkbox_credit"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/cash_img"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_below="@+id/checkbox_cash"
+                        android:layout_marginStart="-42dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/checkbox_cash"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cash"
+                        android:visibility="invisible" />
+
+
+                    <ImageView
+                        android:id="@+id/credit_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/checkbox_credit"
+                        android:layout_marginStart="-43dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/checkbox_credit"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/credit"
+                        android:visibility="invisible" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@+id/checkboxes">
+
+                    <Button
+                        android:id="@+id/add_expanse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/add_expanse"
+                        android:enabled="false"
+                        android:padding="5dp"
+                        android:text="@string/add_expanse" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/expanses_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_input"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="@string/ExpanseList"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/scroll_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/scroll_down"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/expanse_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/scroll_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="@string/scroll_up"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/switch_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expanses_list"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" />
+
+
+            <ImageView
+                android:id="@+id/eyeBtn"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/switch_progress"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/close" />
+
+
+            <LinearLayout
+                android:id="@+id/progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eyeBtn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/layout_bg"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="@string/food"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/foodPB"
+                        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:maxHeight="10dip"
+                        android:minHeight="10dip"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_progress_bar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="@string/clothing"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/clothingPB"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:indeterminate="false"
+                        android:maxHeight="10dip"
+                        android:minHeight="10dip"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_progress_bar" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="@string/home"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/homePB"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="2"
+                        android:indeterminate="false"
+                        android:maxHeight="10dip"
+                        android:minHeight="10dip"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_progress_bar" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:text="@string/electronics"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/electronicsPB"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="2"
+                        android:indeterminate="false"
+                        android:maxHeight="10dip"
+                        android:minHeight="10dip"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/custom_progress_bar" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/start_over"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progress_layout"
+                android:layout_gravity="bottom"
+                android:layout_margin="20dp"
+                android:background="@drawable/btns_shape"
+                android:gravity="center"
+                android:text="@string/start_over"
+                android:textColor="@color/white"
+                app:backgroundTint="@null" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
